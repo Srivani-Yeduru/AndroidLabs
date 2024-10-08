@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <!-- Row 1: Profile Title -->
+    <!-- Row 1 Profile Title -->
     <TextView
         android:id="@+id/profile_title"
         android:layout_width="wrap_content"

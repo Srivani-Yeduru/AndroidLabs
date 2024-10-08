@@ -1,5 +1,4 @@
 package com.cst2335.vani;
-
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.ImageButton;

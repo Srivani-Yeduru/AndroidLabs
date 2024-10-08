@@ -19,7 +19,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Row 2: Name Label -->
+    <!-- Row 2 Name Label -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

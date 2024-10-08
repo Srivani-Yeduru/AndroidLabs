@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         emailEditText = findViewById(R.id.emailEditText);
 
-        // Load SharedPreferences
+
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         String savedEmail = settings.getString("email", "");
         emailEditText.setText(savedEmail);
