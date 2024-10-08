@@ -1,87 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Row 1: Title -->
+    <!-- Row 1: Profile Title -->
     <TextView
         android:id="@+id/profile_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Your Profile"
+        android:text="Your profile"
         android:textSize="24sp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="16dp"/>
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <!-- Row 2: Name Label -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Your name:"
-        android:layout_marginBottom="4dp"/>
+        android:layout_below="@id/profile_title"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" />
 
     <!-- Row 3: Name EditText -->
     <EditText
-        android:id="@+id/nameEditText"
+        android:id="@+id/profileNameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter your name"
-        android:padding="12dp"
+        android:layout_below="@id/profile_title"
+        android:layout_marginTop="8dp"
         android:minHeight="48dp"
-        android:layout_marginBottom="16dp"/>
+        android:padding="12dp"
+        />
 
     <!-- Row 4: Email Label -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Your email:"
-        android:layout_marginBottom="4dp"/>
+        android:layout_below="@id/profileNameEditText"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" />
 
     <!-- Row 5: Email EditText -->
     <EditText
-        android:id="@+id/emailEditText"
+        android:id="@+id/profileEmailEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter your email"
-        android:padding="12dp"
+        android:layout_below="@id/profileNameEditText"
+        android:layout_marginTop="8dp"
         android:minHeight="48dp"
-        android:layout_marginBottom="16dp"/>
+        android:padding="12dp"
+        />
 
     <!-- Row 6: Picture Label -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Your picture:"
-        android:layout_marginBottom="4dp"/>
+        android:layout_below="@id/profileEmailEditText"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" />
 
-    <!-- Row 7: ImageButton for Taking Picture -->
+    <!-- Row 7: ImageButton -->
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@android:drawable/picture_frame"
-        android:contentDescription="Take a picture"
-        android:layout_marginBottom="8dp"/>
-
-    <!-- Row 8: ImageView for Displaying the Captured Image -->
-    <ImageView
-        android:id="@+id/imgView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop"
-        android:layout_gravity="center"
+        android:layout_below="@id/profileEmailEditText"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp"/>
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:contentDescription="Take a picture" />
 
-    <!-- Row 9: Instruction TextView -->
+    <!-- Row 8: ImageButton Description -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Click the button above to take a picture"
-        android:layout_marginTop="8dp"
-        android:layout_gravity="center"/>
+        android:layout_below="@id/imageButton"
+        android:layout_marginTop="8dp" />
 
-</LinearLayout>
+    <!-- Row 9: ImageView -->
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/imageButton"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop" />
+
+</RelativeLayout>

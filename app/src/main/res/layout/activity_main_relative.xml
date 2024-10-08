@@ -1,62 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
-    <!-- Row 1: TextView -->
+    <!-- Row 1: Profile Title -->
     <TextView
-        android:id="@+id/text_view"
+        android:id="@+id/profile_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/gui_text"
-        android:textSize="30dp"
+        android:text="Your profile"
+        android:textSize="24sp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true" />
 
-    <!-- Row 2: Button -->
-    <Button
-        android:id="@+id/button"
+    <!-- Row 2: Name Label -->
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/click_here"
-        android:layout_below="@id/text_view"
-        android:layout_alignParentStart="true"/>
-
-    <!-- Row 2: CheckBox -->
-    <CheckBox
-        android:id="@+id/checkbox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/check_this_out"
-        android:layout_toEndOf="@id/button"
-        android:layout_below="@id/text_view"/>
-
-    <!-- Row 3: ImageButton and Switch -->
-    <ImageButton
-        android:id="@+id/image_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/flag"
-        android:layout_below="@id/checkbox"
+        android:text="Your name:"
+        android:layout_below="@id/profile_title"
         android:layout_alignParentStart="true"
-        android:contentDescription="@string/flag_description" />
+        android:layout_marginTop="16dp" />
 
-    <Switch
-        android:id="@+id/switch_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/checkbox"
-        android:layout_toEndOf="@id/image_button"
-        android:minHeight="48dp"
-        android:text="@string/switch_on_off" />
-
-    <!-- Row 4: EditText -->
+    <!-- Row 3: Name EditText -->
     <EditText
-        android:id="@+id/edit_text"
+        android:id="@+id/profileNameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/image_button"
-        android:hint="@string/type_here"
-        android:inputType="textPersonName"
-        android:minHeight="48dp" />
+        android:hint="Enter your name"
+        android:layout_below="@id/profile_title"
+        android:layout_marginTop="8dp"
+        android:minHeight="48dp"
+        android:padding="12dp"
+         />
+
+    <!-- Row 4: Email Label -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your email:"
+        android:layout_below="@id/profileNameEditText"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Row 5: Email EditText -->
+    <EditText
+        android:id="@+id/profileEmailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your email"
+        android:layout_below="@id/profileNameEditText"
+        android:layout_marginTop="8dp"
+        android:minHeight="48dp"
+        android:padding="12dp"
+         />
+
+    <!-- Row 6: Picture Label -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your picture:"
+        android:layout_below="@id/profileEmailEditText"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Row 7: ImageButton -->
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/picture_frame"
+        android:layout_below="@id/profileEmailEditText"
+        android:layout_marginTop="8dp"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:contentDescription="Take a picture" />
+
+    <!-- Row 8: ImageButton Description -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click the button above to take a picture"
+        android:layout_below="@id/imageButton"
+        android:layout_marginTop="8dp" />
+
+    <!-- Row 9: ImageView -->
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/imageButton"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop" />
+
 </RelativeLayout>
